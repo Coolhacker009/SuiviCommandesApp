@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 60px;
+    justify-content: center;
+}
+
+img{
+    resize: horizontal;
+}
+body{
+    font-family: Poppins, Helvetica, sans-serif;
+}
+p{
+    font-weight: 600;
+   font-size: 12px; 
+   color: rgb(7, 117, 7);
+}
+
+.btn{
+    font-size: 10px;
+    width: 100%;
+    margin-top: 8px;
+    height: 25px;
+}
+
+.card{
+    margin: 20px;
+}

@@ -1,0 +1,72 @@
+#logo{
+    transition: 0.3s all ease;
+}
+#logo:hover{
+    transform: scale(1.1);
+}
+
+.nav-link{
+    padding: 5px;
+    justify-content: center;
+    padding: 15px;
+}
+
+ .menu{
+    background-color: #f53f26;
+    border-radius: 20px;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: 0.3s all ease-in-out;
+}
+
+.menu:hover{
+    background-color: white;
+    border-radius: 20px;
+    color: #f53f26;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid #f53f26;
+}
+.menuCompte{
+    background-color: white ;
+    border-radius: 20px;
+    color: #f53f26;
+    border: 2px solid #f53f26;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.3s all ease-in-out;
+    
+}
+
+.menuCompte:hover{
+    background-color: f53f26 ;
+    border-radius: 20px;
+    color: #f53f26;
+    border: 2px solid #f53f26;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+#navbarSupportedContent{
+    margin-left: 25%;
+
+}
+li{
+    margin-right: 20px;
+}
+
+.navbar{
+    background-color: white;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.container-fluid{
+    background-color: white;
+}
+nav {
+    background-color: white;
+}
