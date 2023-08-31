@@ -16,16 +16,16 @@
           
          
           <div class="form-group">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez votre adresse email" formControlName="email" >
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez votre adresse email" [(ngModel)]="loginObj.email" formControlName="email" >
             
           </div>
           
           <div class="form-group">
-            <input type="password" class="form-control" id="exampleInputEmail1"  placeholder="Entrez votre mot de passe" formControlName="mdp">
+            <input type="password" class="form-control"   placeholder="Entrez votre mot de passe" [(ngModel)]="loginObj.mdp"  formControlName="mdp">
             
           </div>
           
-          <button type="submit" [disabled]="!login.valid" class="btn btn-primary" id="btnvalid">Se connecter</button>
+          <button (click)="onLogin()" type="submit" [disabled]="!login.valid" class="btn btn-primary" id="btnvalid">Se connecter</button>
         </form>
         <p id="conn">Vous n'avez de compte?<a routerLink="/signup">Inscrivez-vous ici</a></p>
       </div>

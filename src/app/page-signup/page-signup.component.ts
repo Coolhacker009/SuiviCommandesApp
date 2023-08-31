@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Iuser } from './user.model';
 import { ServiceUserService } from './service-user.service';
@@ -8,7 +8,7 @@ import { ServiceUserService } from './service-user.service';
   templateUrl: './page-signup.component.html',
   styleUrls: ['./page-signup.component.css']
 })
-export class PageSignupComponent {
+export class PageSignupComponent implements OnInit {
 
   signup = this.formBuilder.group({
     prenom : ['',Validators.required],
@@ -20,6 +20,12 @@ export class PageSignupComponent {
   })
 
   constructor(private formBuilder : FormBuilder,private serviceUser:ServiceUserService){}
+  ngOnInit(): void {
+   const localData = localStorage.getItem('signUpUsers');
+   if(localData != null){
+    this.signUpUsers= JSON.parse(localData);
+   }
+  }
 
   onSubmit(){
     const user : Iuser = {
@@ -33,5 +39,30 @@ export class PageSignupComponent {
     this.serviceUser.addUser(user);
     localStorage.setItem("session",JSON.stringify(user));
   }
+
+  signUpUsers: any[] = [];
+  signupObj:any = {
+    prenom : '',
+    nom : '',
+    email : '',
+    age : '',
+    mdp : '',
+    pseudo: ''
+
+};
+
+onSignUp(){
+  this.signUpUsers.push(this.signupObj);
+  localStorage.setItem("signUpUsers", JSON.stringify(this.signUpUsers));
+  this.signupObj = {
+    prenom : '',
+    nom : '',
+    email : '',
+    age : '',
+    mdp : '',
+    pseudo: ''
+
+};
+}
 
 }

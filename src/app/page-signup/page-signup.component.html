@@ -17,30 +17,30 @@
           height="100px" width="100px">
         <form [formGroup]="signup" (ngSubmit)="onSubmit()" class="animate__animated animate__fadeInLeft">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Entrez votre prénom" formControlName="prenom">
+            <input type="text" class="form-control" placeholder="Entrez votre prénom" [(ngModel)]="signupObj.prenom" formControlName="prenom">
 
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Entrez votre nom" required formControlName="nom">
+            <input type="text" class="form-control" placeholder="Entrez votre nom" [(ngModel)]="signupObj.nom" required formControlName="nom">
 
           </div>
           <div class="form-group">
             <input type="email" class="form-control" aria-describedby="emailHelp"
-              placeholder="Entrez votre adresse email" formControlName="email">
+              placeholder="Entrez votre adresse email" [(ngModel)]="signupObj.email" formControlName="email">
 
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Entrez votre age" formControlName="age">
+            <input type="text" class="form-control" placeholder="Entrez votre age" [(ngModel)]="signupObj.age" formControlName="age">
 
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" placeholder="Entrez votre mot de passe" formControlName="mdp">
+            <input type="password" class="form-control" placeholder="Entrez votre mot de passe" [(ngModel)]="signupObj.mdp" formControlName="mdp">
 
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder=" Entrez votre pseudo" formControlName="pseudo">
+            <input type="text" class="form-control" placeholder=" Entrez votre pseudo" [(ngModel)]="signupObj.pseudo" formControlName="pseudo">
           </div>
-          <button type="submit" [disabled]="!signup.valid" class="btn btn-primary" id="btnvalid">S'inscrire</button>
+          <button (click)="onSignUp()" type="submit" [disabled]="!signup.valid" class="btn btn-primary" id="btnvalid">S'inscrire</button>
         </form>
         <p id="conn">Avez-vous déja un compte?<a routerLink="/login">Connectez-vous ici</a></p>
       </div>

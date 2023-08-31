@@ -8,6 +8,7 @@ import { PageLoginComponent } from './page-login/page-login.component';
 import { PageSignupComponent } from './page-signup/page-signup.component';
 import { PageProductComponent } from './page-product/page-product.component';
 
+
 const routes: Routes = [
   {path:"", component: PageHomeComponent},
   {path:"produit", component: ListeProduitsComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path:"commande", component: SuiviCommandesComponent},
   {path:"login", component: PageLoginComponent},
   {path:"signup",component:PageSignupComponent},
-  {path:"product/:id",component:PageProductComponent},  
+  {path:"product/:id",component:PageProductComponent}, 
+ 
+   
 ];
 
 @NgModule({

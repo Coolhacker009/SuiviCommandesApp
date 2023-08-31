@@ -11,7 +11,9 @@ import { PageHomeComponent } from './page-home/page-home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageSignupComponent } from './page-signup/page-signup.component';
 import { PageProductComponent } from './page-product/page-product.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -23,11 +25,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     PageHomeComponent,
     NavbarComponent,
     PageSignupComponent,
-    PageProductComponent
+    PageProductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
