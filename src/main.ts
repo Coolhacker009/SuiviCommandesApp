@@ -7,12 +7,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
   
-  export interface produit{
-    id: number;
-    nom: string;
-    description: string;
-    prix: number;
-}
+
 
 export interface commande{
   id: number;

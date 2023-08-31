@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:"commande", component: SuiviCommandesComponent},
   {path:"login", component: PageLoginComponent},
   {path:"signup",component:PageSignupComponent},
-  {path:"product",component:PageProductComponent},
+  {path:"product/:id",component:PageProductComponent},  
 ];
 
 @NgModule({

@@ -12,20 +12,20 @@
     <div class="row-custom">
       <div class="col" id="home-txt" >
         <img src="assets/img/Logo easy shop 2.png" class="animate__animated animate__fadeInDown" alt="" srcset="" height="110px" width="110px">
-        <form class="animate__animated animate__fadeInLeft">
+        <form [formGroup]="login" class="animate__animated animate__fadeInLeft">
           
          
           <div class="form-group">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez votre adresse email" formControlName="email" >
             
           </div>
           
           <div class="form-group">
-            <input type="password" class="form-control" id="exampleInputEmail1"  placeholder="Entrez votre mot de passe">
+            <input type="password" class="form-control" id="exampleInputEmail1"  placeholder="Entrez votre mot de passe" formControlName="mdp">
             
           </div>
           
-          <button type="submit" class="btn btn-primary" id="btnvalid">Se connecter</button>
+          <button type="submit" [disabled]="!login.valid" class="btn btn-primary" id="btnvalid">Se connecter</button>
         </form>
         <p id="conn">Vous n'avez de compte?<a routerLink="/signup">Inscrivez-vous ici</a></p>
       </div>

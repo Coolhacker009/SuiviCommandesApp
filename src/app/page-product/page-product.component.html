@@ -2,20 +2,20 @@
   <div class="row">
     <div class="col-4 animate__animated animate__fadeInBottomLeft">
       <div class="card" style="width: 18rem;">
-        <img src="../../assets/img/28530-3-nike-shoes-transparent.png" class="card-img-top" alt="...">
+        <img [src]="product.imageUrl" class="card-img-top" alt="...">
         <div class="card-body">
-          <p>Title</p>
-          <p class="card-text">Prix : 400 000 Fcfa</p>
+          <p>{{product.nom}}</p>
+          <strong></strong><p class="card-text" style="color: green;">Prix : <strong> {{product.prix}}</strong></p>
           <a href="#" class="btn btn-success" id="btn1">Commander</a><input type="number"><br>
               <a href="#" class="btn btn-primary" id="btn2"><i class="fa-solid fa-basket-shopping"></i></a>
         </div>
       </div>
     </div>
-    <div class="col-6 animate__animated animate__fadeInBottomRight" id="col2">
+    <div  class="col-6 animate__animated animate__fadeInBottomRight" id="col2" >
       <p style="text-align: left; margin: 20px;">Détail du produit :</p>
-      <p class="detail">Marque : </p>
-      <p class="detail">Modèle : </p>
-      <p class="detail">Poids : </p>
+      <p class="detail">Nom : {{product.nom}}</p>
+      <p class="detail">Description : {{product.description}}</p>
+      <p class="detail" style="color: green;">Prix : {{product.prix}}</p>
     </div>
   </div>
 </div>
