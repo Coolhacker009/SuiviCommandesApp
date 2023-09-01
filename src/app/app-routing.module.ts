@@ -9,6 +9,7 @@ import { PageSignupComponent } from './page-signup/page-signup.component';
 import { PageProductComponent } from './page-product/page-product.component';
 
 
+
 const routes: Routes = [
   {path:"", component: PageHomeComponent},
   {path:"produit", component: ListeProduitsComponent},

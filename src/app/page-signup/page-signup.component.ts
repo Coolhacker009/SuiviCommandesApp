@@ -54,6 +54,7 @@ export class PageSignupComponent implements OnInit {
 onSignUp(){
   this.signUpUsers.push(this.signupObj);
   localStorage.setItem("signUpUsers", JSON.stringify(this.signUpUsers));
+  sessionStorage.setItem("currentUser", this.signupObj.pseudo)
   this.signupObj = {
     prenom : '',
     nom : '',
@@ -64,5 +65,6 @@ onSignUp(){
 
 };
 }
+
 
 }

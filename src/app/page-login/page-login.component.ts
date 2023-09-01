@@ -38,6 +38,9 @@ constructor(private formBuilder : FormBuilder){}
 
     if(IuserExist !=undefined){
       alert("Connexion réussie ✅");
+      const succes = new Audio
+      succes.src = "../../assets/audio/success.mp3"
+      succes.play();
       localStorage.setItem("userCurrent",JSON.stringify(IuserExist));
     }else{
       alert("L'adresse email ou le mot de passe est incorrect ❌")
