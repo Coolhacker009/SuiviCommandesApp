@@ -15,7 +15,7 @@
         <h6 class="card-title">{{product.nom}}</h6>
         <p>Prix : {{product.prix}}</p>
         <a href="#" class="btn btn-success" [routerLink]="'/product/'+product.id">Voir</a>
-        <a href="#" class="btn btn-primary">Commander</a>
+        <a id="{{product.id}}" class="btn btn-primary" (click)="Oncommand(product.id)">Commander</a>
       </div>
     </div>
 

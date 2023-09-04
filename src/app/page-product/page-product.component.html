@@ -6,8 +6,8 @@
         <div class="card-body">
           <p>{{product.nom}}</p>
           <strong></strong><p class="card-text" ><strong>Prix :</strong> <strong style="color: green;"> {{product.prix}}</strong></p>
-          <a href="#" class="btn btn-success" id="btn1">Commander</a><input type="number"><br>
-              <a href="#" class="btn btn-primary" id="btn2"><i class="fa-solid fa-basket-shopping"></i></a>
+          <a (click)="Oncommand(product.id)" class="btn btn-success" id="btn1">Commander</a><input type="number"><br>
+              <a (click)="addBasket(product.id)" class="btn btn-primary" id="btn2"><i class="fa-solid fa-basket-shopping"></i></a>
         </div>
       </div>
     </div>
