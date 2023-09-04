@@ -22,8 +22,7 @@ export class PageProductComponent implements OnInit {
 
   constructor(private produitService : ProduitService, 
     private activatedRoute : ActivatedRoute,
-    private router: Router,
-    listeProduitComponent : ListeProduitsComponent){}
+    private router: Router,){}
 
   ngOnInit(): void {
     this.produits=this.produitService.getAllproducts();
@@ -56,23 +55,7 @@ export class PageProductComponent implements OnInit {
     }
   }
         
-  addBasket(id:number){
-   if(sessionStorage.getItem("currentUser")){
-      // Récupérer les produits déjà présents dans le panier depuis le localStorage
-  const panier: number[] = JSON.parse(localStorage.getItem("panier") || "[]");
-
-  // Vérifier si le produit n'est pas déjà dans le panier (en fonction de son ID)
-  if (!panier.includes(id)) {
-    // Ajouter l'ID du produit au panier
-    panier.push(id);
-
-    // Mettre à jour le panier dans le localStorage
-    localStorage.setItem("panier", JSON.stringify(panier));
-  }
-
-   }
-    
-  }
+ 
   
 
 }

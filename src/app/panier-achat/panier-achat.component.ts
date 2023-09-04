@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../page-product/product-details.service';
 import { ProductDetails } from '../page-product/productDetails.model';
 import { ListeProduitsComponent } from '../liste-produits/liste-produits.component';
-import { ProduitService } from '../liste-produits/ProduitService';
 
 @Component({
   selector: 'app-panier-achat',
